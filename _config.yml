@@ -11,6 +11,11 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
 defaults:
   - scope:
       path: ""
