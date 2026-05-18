@@ -60,6 +60,7 @@ social:
 
 # Custom scripts
 head_scripts:
+  - "/assets/css/custom.css"
   - "/assets/js/particles.js"
 
 footer_scripts:
