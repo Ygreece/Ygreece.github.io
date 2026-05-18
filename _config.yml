@@ -5,7 +5,7 @@ url: "https://ygreece.github.io"
 baseurl: ""
 repository: "Ygreece/Ygreece.github.io"
 
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.28.0
 
 plugins:
   - jekyll-include-cache
@@ -27,6 +27,7 @@ defaults:
 author:
   name: "greece"
   bio: "西北农林科技大学 · 电子信息工程 · 学习中"
+  avatar: "/assets/images/profile.jpeg"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
@@ -43,3 +44,24 @@ navigation:
       url: /projects/
     - title: "联系"
       url: /contact/
+
+# Enable copy code button
+enable_copy_code_button: true
+
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/Ygreece"
+
+# SEO
+google_site_verification: ""
+twitter:
+  username: ""
+
+# Social sharing
+social:
+  name: "greece"
+  links:
+    - https://github.com/Ygreece
