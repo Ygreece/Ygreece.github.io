@@ -57,3 +57,10 @@ social:
   name: "greece"
   links:
     - https://github.com/Ygreece
+
+# Custom scripts
+head_scripts:
+  - "/assets/js/particles.js"
+
+footer_scripts:
+  - "/assets/js/animations.js"
