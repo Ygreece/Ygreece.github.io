@@ -1,40 +1,17 @@
 title: "greece"
 description: "学习记录 · 欢迎指导"
 locale: "zh-CN"
-type: "Person"
 url: "https://ygreece.github.io"
 baseurl: ""
 repository: "Ygreece/Ygreece.github.io"
 
-# ── Remote Theme ──
-remote_theme: mmistakes/minimal-mistakes@4.26.2
+remote_theme: mmistakes/minimal-mistakes
 
-# ── Skin ──
-skin: "dark"
-
-# ── Plugins ──
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
-# ── Collections ──
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:name/
-
-# ── Defaults ──
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "single"
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   - scope:
       path: ""
       type: "pages"
@@ -42,11 +19,9 @@ defaults:
       layout: "single"
       author_profile: true
 
-# ── Author ──
 author:
   name: "greece"
   bio: "西北农林科技大学 · 电子信息工程 · 学习中"
-  avatar: "/assets/images/profile.png"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
@@ -55,7 +30,6 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/Ygreece"
 
-# ── Navigation ──
 navigation:
   main:
     - title: "关于"
@@ -64,25 +38,3 @@ navigation:
       url: /projects/
     - title: "联系"
       url: /contact/
-
-# ── UI Text (Chinese) ──
-ui_text:
-  skip_label: "跳过"
-  navigation_label: "导航"
-  menu_label: "菜单"
-  search_label: "搜索"
-  results_label: "搜索结果"
-  back_to_top: "回到顶部"
-  newer: "较新"
-  older: "较旧"
-  minute_read: "分钟阅读"
-  share_on_label: "分享到"
-  meta_label: "元信息"
-  categories_label: "分类"
-  tags_label: "标签"
-  date_label: "日期"
-  comments_label: "评论"
-  comments_title: "评论"
-  more_label: "阅读更多"
-  related_label: "相关文章"
-  follow_label: "关注"
