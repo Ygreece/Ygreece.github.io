@@ -16,10 +16,11 @@ skin: "dark"
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 # ── Collections ──
 collections:
-  projects:
+  portfolio:
     output: true
     permalink: /:collection/:name/
 
@@ -35,6 +36,12 @@ defaults:
       comments: true
       share: true
       related: true
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "single"
+      author_profile: true
   - scope:
       path: ""
       type: "pages"
@@ -58,12 +65,16 @@ author:
 # ── Navigation ──
 navigation:
   main:
+    - title: "文章"
+      url: /posts/
+    - title: "分类"
+      url: /categories/
+    - title: "标签"
+      url: /tags/
+    - title: "项目"
+      url: /portfolio/
     - title: "关于"
       url: /about/
-    - title: "项目"
-      url: /projects/
-    - title: "联系"
-      url: /contact/
 
 # ── UI Text (Chinese) ──
 ui_text:

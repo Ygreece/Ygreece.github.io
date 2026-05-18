@@ -1,5 +1,5 @@
 ---
-title: "关于我"
+title: "关于"
 layout: "single"
 permalink: /about/
 author_profile: true
@@ -17,6 +17,7 @@ author_profile: true
 | 专业 | 电子信息工程（本科） |
 | 年级 | 2024 级 |
 | 邮箱 | [wkldmz666@nwsuaf.edu.cn](mailto:wkldmz666@nwsuaf.edu.cn) |
+| GitHub | [github.com/Ygreece](https://github.com/Ygreece) |
 
 ## 技能（学习中）
 
@@ -42,5 +43,5 @@ author_profile: true
 
 ## 荣誉证书
 
-- 🏆 2025 RoboMaster 高校联盟赛一等奖
-- 📜 英语四级（CET-4）
+- 2025 RoboMaster 高校联盟赛一等奖
+- 英语四级（CET-4）
