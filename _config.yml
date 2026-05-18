@@ -111,10 +111,3 @@ social:
   links:
     - https://github.com/Ygreece
 
-# Custom scripts
-head_scripts:
-  - "/assets/css/custom.css"
-  - "/assets/js/particles.js"
-
-footer_scripts:
-  - "/assets/js/animations.js"
