@@ -4,6 +4,12 @@ excerpt: "众泰汽车实习期间参与的车载 T-Box 通信与升级系统开
 header:
   teaser: /assets/images/profile.jpeg
 date: 2026-03-01
+tags:
+  - Linux
+  - C
+  - Socket
+  - 车联网
+  - 实习
 ---
 
 *2026.01 — 2026.03 · 众泰汽车杭州研究院*

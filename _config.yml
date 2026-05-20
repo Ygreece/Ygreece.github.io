@@ -23,6 +23,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:name/
+  pages:
+    output: true
+    permalink: /:name/
 
 # ── Defaults ──
 defaults:
@@ -75,6 +78,8 @@ navigation:
       url: /portfolio/
     - title: "关于"
       url: /about/
+    - title: "联系"
+      url: /contact/
 
 # ── UI Text (Chinese) ──
 ui_text:
