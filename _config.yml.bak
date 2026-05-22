@@ -1,0 +1,118 @@
+title: "greece"
+description: "学习记录 · 欢迎指导"
+locale: "zh-CN"
+type: "Person"
+url: "https://ygreece.github.io"
+baseurl: ""
+repository: "Ygreece/Ygreece.github.io"
+
+# ── Remote Theme ──
+remote_theme: mmistakes/minimal-mistakes@4.28.0
+
+# ── Skin ──
+skin: "dark"
+
+# ── Plugins ──
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# ── Collections ──
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name/
+  pages:
+    output: true
+    permalink: /:name/
+
+# ── Defaults ──
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "single"
+      author_profile: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single"
+      author_profile: true
+
+# ── Author ──
+author:
+  name: "greece"
+  bio: "西北农林科技大学 · 电子信息工程 · 学习中"
+  avatar: "/assets/images/1B1110E1C518F11AFB3B5C1A3E325451.gif"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:wkldmz666@nwsuaf.edu.cn"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/Ygreece"
+
+# ── Navigation ──
+navigation:
+  main:
+    - title: "文章"
+      url: /posts/
+    - title: "分类"
+      url: /categories/
+    - title: "标签"
+      url: /tags/
+    - title: "项目"
+      url: /portfolio/
+    - title: "关于"
+      url: /about/
+    - title: "联系"
+      url: /contact/
+
+# ── UI Text (Chinese) ──
+ui_text:
+  skip_label: "跳过"
+  navigation_label: "导航"
+  menu_label: "菜单"
+  search_label: "搜索"
+  results_label: "搜索结果"
+  back_to_top: "回到顶部"
+  newer: "较新"
+  older: "较旧"
+  minute_read: "分钟阅读"
+  share_on_label: "分享到"
+  meta_label: "元信息"
+  categories_label: "分类"
+  tags_label: "标签"
+  date_label: "日期"
+  comments_label: "评论"
+  comments_title: "评论"
+  more_label: "阅读更多"
+  related_label: "相关文章"
+  follow_label: "关注"
+
+enable_copy_code_button: true
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/Ygreece"
+
+social:
+  name: "greece"
+  links:
+    - https://github.com/Ygreece
+

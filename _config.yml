@@ -1,118 +1,257 @@
-title: "greece"
-description: "学习记录 · 欢迎指导"
+# --- Theme & Interface ---
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
+minimal_mistakes_skin: "dark"
+
+# Site Settings
 locale: "zh-CN"
-type: "Person"
+rtl: false
+title: "greece"
+title_separator: "-"
+subtitle: "学习记录 · 欢迎指导"
+name: "greece"
+description: "Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better."
 url: "https://ygreece.github.io"
-baseurl: ""
+baseurl:
 repository: "Ygreece/Ygreece.github.io"
+teaser: "/assets/images/profile.jpeg"
+logo:
+masthead_title:
+breadcrumbs: false
+words_per_minute: 100
+enable_copy_code_button: true
+copyright:
+copyright_url:
 
-# ── Remote Theme ──
-remote_theme: mmistakes/minimal-mistakes@4.28.0
+# Comments (giscus)
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id:
+    category_name: "General"
+    category_id:
+    discussion_term: "pathname"
+    reactions_enabled: "1"
+    theme: "transparent_dark"
+    strict: "0"
+    input_position: "bottom"
+    emit_metadata: "0"
+    lang: "zh-CN"
+    lazy: true
 
-# ── Skin ──
-skin: "dark"
+atom_feed:
+  path:
+  hide: false
 
-# ── Plugins ──
-plugins:
-  - jekyll-include-cache
-  - jekyll-remote-theme
-  - jekyll-seo-tag
+search: true
+search_full_content: false
+search_provider: "lunr"
+lunr:
+  search_within_pages: true
 
-# ── Collections ──
+# SEO
+google_site_verification:
+bing_site_verification:
+
+# Social Sharing
+twitter:
+  username:
+og_image: "/assets/images/profile.jpeg"
+
+social:
+  type: Person
+  name: "greece"
+  links:
+    - "https://github.com/Ygreece"
+
+# Analytics
+analytics:
+  provider: false
+
+# Site Author
+author:
+  name: "greece"
+  avatar: "/assets/images/1B1110E1C518F11AFB3B5C1A3E325451.gif"
+  bio: "西北农林科技大学 · 电子信息工程 · 学习中"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:wkldmz666@nwsuaf.edu.cn"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ygreece"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ygreece"
+since: "2025"
+
+include:
+  - _pages
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "<!--more-->"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Output
+permalink: /:categories/:title/
+time_zone: "Asia/Shanghai"
+
+# Collections
 collections:
   portfolio:
     output: true
-    permalink: /:collection/:name/
-  pages:
-    output: true
-    permalink: /:name/
+    permalink: /:collection/:title/
 
-# ── Defaults ──
+# Pagination
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: ''
+  trail:
+    before: 2
+    after: 2
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-spaceship
+  - jekyll-archives
+
+# Archives
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+    - tags
+    - categories
+  layouts:
+    year: archive
+    month: archive
+    day: archive
+    tag: archive-taxonomy
+    category: archive-taxonomy
+  permalinks:
+    year: /:year/
+    month: /:year/:month/
+    day: /:year/:month/:day/
+    tags: /tags/:name/
+    categories: /categories/:name/
+
+# Jekyll Spaceship
+jekyll-spaceship:
+  processors:
+    - table-processor
+    - mathjax-processor
+    - plantuml-processor
+    - mermaid-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-processor
+    - element-processor
+  mathjax-processor:
+    src:
+      - https://polyfill.io/v3/polyfill.min.js?features=es6
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    config:
+      tex:
+        inlineMath:
+          - ['$','$']
+          - ['\(','\)']
+        displayMath:
+          - ['$$','$$']
+          - ['\[','\]']
+      svg:
+        fontCache: 'global'
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "single"
+      layout: single
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
+      show_date: true
+      toc: true
+      toc_sticky: true
   - scope:
-      path: ""
-      type: "portfolio"
+      path: "_pages"
+      type: pages
     values:
-      layout: "single"
+      layout: single
       author_profile: true
   - scope:
       path: ""
-      type: "pages"
+      type: portfolio
     values:
-      layout: "single"
+      layout: single
       author_profile: true
-
-# ── Author ──
-author:
-  name: "greece"
-  bio: "西北农林科技大学 · 电子信息工程 · 学习中"
-  avatar: "/assets/images/1B1110E1C518F11AFB3B5C1A3E325451.gif"
-  links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:wkldmz666@nwsuaf.edu.cn"
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/Ygreece"
-
-# ── Navigation ──
-navigation:
-  main:
-    - title: "文章"
-      url: /posts/
-    - title: "分类"
-      url: /categories/
-    - title: "标签"
-      url: /tags/
-    - title: "项目"
-      url: /portfolio/
-    - title: "关于"
-      url: /about/
-    - title: "联系"
-      url: /contact/
-
-# ── UI Text (Chinese) ──
-ui_text:
-  skip_label: "跳过"
-  navigation_label: "导航"
-  menu_label: "菜单"
-  search_label: "搜索"
-  results_label: "搜索结果"
-  back_to_top: "回到顶部"
-  newer: "较新"
-  older: "较旧"
-  minute_read: "分钟阅读"
-  share_on_label: "分享到"
-  meta_label: "元信息"
-  categories_label: "分类"
-  tags_label: "标签"
-  date_label: "日期"
-  comments_label: "评论"
-  comments_title: "评论"
-  more_label: "阅读更多"
-  related_label: "相关文章"
-  follow_label: "关注"
-
-enable_copy_code_button: true
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/Ygreece"
-
-social:
-  name: "greece"
-  links:
-    - https://github.com/Ygreece
-
+      share: true
