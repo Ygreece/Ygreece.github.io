@@ -1,8 +1,6 @@
 ---
 title: "RoboMaster 步兵机器人（电控）"
 excerpt: "参与步兵机器人的电控系统开发，负责时间片调度框架、串级 PID 控制、UART/CAN 通信等模块。"
-header:
-  teaser: /assets/images/profile.jpeg
 date: 2025-04-01
 tags:
   - STM32

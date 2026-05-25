@@ -1,8 +1,6 @@
 ---
 title: "基于 STM32 的两轮自平衡机器人"
 excerpt: "课程设计项目，基于 STM32F103 实现两轮自平衡机器人，包含姿态检测、卡尔曼滤波和 PID 控制。"
-header:
-  teaser: /assets/images/profile.jpeg
 date: 2025-12-01
 tags:
   - STM32
