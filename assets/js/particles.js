@@ -1,8 +1,8 @@
-// Particle Background Effect
+// Particle Background Effect with Fade-in
 (function() {
   const canvas = document.createElement('canvas');
   canvas.id = 'particle-canvas';
-  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;';
+  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:0;transition:opacity 1.5s ease-in;';
   document.body.prepend(canvas);
 
   const ctx = canvas.getContext('2d');
@@ -96,7 +96,22 @@
   window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
   window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
 
+  // Scroll-based fade: particles fade out when scrolling down
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const fadeStart = 100;
+    const fadeEnd = 600;
+    const opacity = Math.max(0.15, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
+    canvas.style.transition = 'opacity 0.3s ease-out';
+    canvas.style.opacity = String(Math.min(1, opacity));
+  });
+
   resize();
   createParticles();
   draw();
+
+  // Fade in after particles are ready
+  requestAnimationFrame(() => {
+    canvas.style.opacity = '1';
+  });
 })();
