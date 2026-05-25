@@ -5,36 +5,49 @@ permalink: /tags/
 author_profile: true
 ---
 
-{% capture tags %}
-  {% for post in site.posts %}{% for tag in post.tags %}{{ tag }},{% endfor %}{% endfor %}
-{% endcapture %}
-{% assign unique_tags = tags | split: ',' | uniq | sort %}
+<div id="tag-container"></div>
 
-<div class="tag-cloud">
-{% for tag in unique_tags %}
-  {% if tag != "" %}
-    <span class="tag-item">
-      <a href="#{{ tag | slugify }}">{{ tag }}</a>
-    </span>
-  {% endif %}
-{% endfor %}
-</div>
-
-{% for tag in unique_tags %}
-  {% if tag != "" %}
-    <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-    <ul>
+<script>
+(function() {
+  var posts = [
     {% for post in site.posts %}
-      {% if post.tags contains tag %}
-        <li>
-          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endif %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": "{{ post.url }}",
+      "date": "{{ post.date | date: '%Y-%m-%d' }}",
+      "tags": {{ post.tags | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
     {% endfor %}
-    </ul>
-  {% endif %}
-{% endfor %}
+  ];
+
+  var tagMap = {};
+  posts.forEach(function(post) {
+    (post.tags || []).forEach(function(tag) {
+      if (!tagMap[tag]) tagMap[tag] = [];
+      tagMap[tag].push(post);
+    });
+  });
+
+  var container = document.getElementById('tag-container');
+
+  var cloudHtml = '<div class="tag-cloud">';
+  Object.keys(tagMap).sort().forEach(function(tag) {
+    cloudHtml += '<span class="tag-item"><a href="#' + tag + '">' + tag + ' (' + tagMap[tag].length + ')</a></span>';
+  });
+  cloudHtml += '</div>';
+
+  var listHtml = '';
+  Object.keys(tagMap).sort().forEach(function(tag) {
+    listHtml += '<h2 id="' + tag + '">' + tag + '</h2><ul>';
+    tagMap[tag].forEach(function(post) {
+      listHtml += '<li><span class="post-date">' + post.date + '</span><a href="' + post.url + '">' + post.title + '</a></li>';
+    });
+    listHtml += '</ul>';
+  });
+
+  container.innerHTML = cloudHtml + listHtml;
+})();
+</script>
 
 <style>
 .tag-cloud {
