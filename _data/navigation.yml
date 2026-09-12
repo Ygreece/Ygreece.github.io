@@ -7,5 +7,7 @@ main:
     url: /tags/
   - title: "项目"
     url: /portfolio/
+  - title: "开源项目"
+    url: /github-projects/
   - title: "关于"
     url: /about/

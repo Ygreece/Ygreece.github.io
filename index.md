@@ -5,36 +5,42 @@ pagination:
   enabled: true
 ---
 
-<section class="home-hero">
-  <p class="home-hero__eyebrow">ELECTRONIC INFORMATION ENGINEERING · NWAFU</p>
-  <h1>把学习沉淀成<br>能运行的项目。</h1>
-  <p class="home-hero__lead">你好，我是 greece，一名电子信息工程专业本科生。这里记录我在嵌入式、Linux 应用开发与机器人电控方向的学习和实践。</p>
-  <p class="home-hero__actions"><a class="btn btn--primary" href="/portfolio/">查看项目</a><a class="btn btn--inverse" href="/about/">认识我</a></p>
+<section class="firefly-hero">
+  <div class="firefly-hero__content">
+    <p class="firefly-hero__eyebrow">GREECE · ELECTRONIC INFORMATION ENGINEERING</p>
+    <h1>仍在成为。</h1>
+    <p class="firefly-hero__quote">把每一次尝试、出错和迭代，留成下一次前进的注脚。</p>
+    <div class="firefly-hero__links">
+      <a href="/about/">关于我</a>
+      <a href="/portfolio/">项目实践</a>
+      <a href="https://github.com/Ygreece">GitHub ↗</a>
+    </div>
+  </div>
+  <a class="firefly-hero__scroll" href="#latest">↓ 浏览最新内容</a>
 </section>
 
-<section class="home-section" aria-labelledby="focus-title">
-  <p class="home-section__eyebrow">CURRENT FOCUS</p>
-  <h2 id="focus-title">正在学习的方向</h2>
-  <div class="home-grid">
-    <article class="home-card"><h3>嵌入式系统</h3><p>STM32 外设驱动、控制算法与实时任务调度。</p></article>
-    <article class="home-card"><h3>Linux C 开发</h3><p>从文件 I/O、进程线程到网络通信与工程化构建。</p></article>
-    <article class="home-card"><h3>机器人电控</h3><p>CAN 通信、串级 PID 与在真实硬件上持续调参。</p></article>
+<section class="firefly-intro" id="latest" aria-labelledby="focus-title">
+  <p class="section-kicker">CURRENT FOCUS</p>
+  <h2 id="focus-title">记录学习，也记录实践。</h2>
+  <p>目前主要探索嵌入式系统、Linux C 开发与机器人电控。这里的文章、项目和代码，会随着学习持续更新。</p>
+  <div class="firefly-grid">
+    <a class="firefly-card" href="/portfolio/linux-file-server/"><span>LINUX · C</span><strong>多线程文件传输服务器</strong><small>网络编程、线程池与 epoll 的实践</small></a>
+    <a class="firefly-card" href="/portfolio/robomaster/"><span>STM32 · CAN</span><strong>RoboMaster 电控</strong><small>控制、通信与真实赛场的联调</small></a>
+    <a class="firefly-card" href="/github-projects/"><span>GITHUB</span><strong>开源项目</strong><small>自动同步最近更新的公开项目</small></a>
   </div>
 </section>
 
-<section class="home-section" aria-labelledby="work-title">
-  <p class="home-section__eyebrow">SELECTED WORK</p>
-  <h2 id="work-title">项目与实践</h2>
-  <div class="home-grid">
-    <article class="home-card"><p class="home-card__meta">Linux · C · 网络编程</p><h3><a href="/portfolio/linux-file-server/">多线程文件传输服务器</a></h3><p>围绕 TCP、线程池、epoll 和文件传输构建的 Linux 应用编程练习项目。</p></article>
-    <article class="home-card"><p class="home-card__meta">STM32 · PID · CAN</p><h3><a href="/portfolio/robomaster/">RoboMaster 步兵机器人</a></h3><p>参与电控系统开发，学习调度、通信和云台控制的协同。</p></article>
-    <article class="home-card"><p class="home-card__meta">STM32 · MPU6050</p><h3><a href="/portfolio/balance-car/">两轮自平衡机器人</a></h3><p>从电机驱动、姿态检测到 PID 控制的一次课程设计实践。</p></article>
+<section class="firefly-intro firefly-projects" aria-labelledby="projects-title">
+  <p class="section-kicker">FROM GITHUB</p>
+  <h2 id="projects-title">最近更新的开源项目</h2>
+  <div class="firefly-grid">
+    {% for project in site.data.github_projects limit: 6 %}
+    <a class="firefly-card" href="{{ project.html_url }}">
+      <span>{{ project.language | default: "PROJECT" }} · {{ project.updated_at | date: "%Y-%m-%d" }}</span>
+      <strong>{{ project.name }}</strong>
+      <small>{{ project.description | default: "暂无项目说明。" }}</small>
+    </a>
+    {% endfor %}
   </div>
-  <p class="home-section__more"><a href="/portfolio/">浏览全部项目 →</a></p>
-</section>
-
-<section class="home-contact">
-  <p class="home-section__eyebrow">LET'S CONNECT</p>
-  <h2>欢迎交流学习与项目。</h2>
-  <p><a href="mailto:wkldmz666@nwsuaf.edu.cn">发送邮件</a> · <a href="https://github.com/Ygreece">GitHub</a></p>
+  <p class="firefly-more"><a href="/github-projects/">查看全部 GitHub 项目 →</a></p>
 </section>

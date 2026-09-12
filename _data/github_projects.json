@@ -1,0 +1,52 @@
+[
+  {
+    "name": "UNO_DHT11_OLED",
+    "description": "Arduino Uno 温湿度与 OLED 显示课程项目。",
+    "html_url": "https://github.com/Ygreece/UNO_DHT11_OLED",
+    "homepage": null,
+    "language": "C++",
+    "topics": [],
+    "updated_at": "2026-09-09T07:48:22Z",
+    "stargazers_count": 0
+  },
+  {
+    "name": "xian-highspeed-rail",
+    "description": "西安高铁主题网页项目。",
+    "html_url": "https://github.com/Ygreece/xian-highspeed-rail",
+    "homepage": null,
+    "language": "HTML",
+    "topics": [],
+    "updated_at": "2026-09-08T15:29:26Z",
+    "stargazers_count": 0
+  },
+  {
+    "name": "motor-pwm-controller",
+    "description": "电子设计综合实验：直流电机转速检测与脉宽调速器。",
+    "html_url": "https://github.com/Ygreece/motor-pwm-controller",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "updated_at": "2026-09-08T15:29:24Z",
+    "stargazers_count": 0
+  },
+  {
+    "name": "world-cup-2026",
+    "description": "FIFA World Cup 2026 主题网页。",
+    "html_url": "https://github.com/Ygreece/world-cup-2026",
+    "homepage": null,
+    "language": "HTML",
+    "topics": [],
+    "updated_at": "2026-05-27T15:38:31Z",
+    "stargazers_count": 0
+  },
+  {
+    "name": "linux-c-learning",
+    "description": "Linux C 学习项目集，包含内存池、日志系统、Web 服务器等项目。",
+    "html_url": "https://github.com/Ygreece/linux-c-learning",
+    "homepage": null,
+    "language": "C",
+    "topics": [],
+    "updated_at": "2026-05-25T15:05:30Z",
+    "stargazers_count": 0
+  }
+]
